@@ -1,0 +1,31 @@
+<h1>Listing barrels</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Net weight</th>
+      <th>Tare</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @barrels.each do |barrel| %>
+      <tr>
+        <td><%= barrel.type %></td>
+        <td><%= barrel.net_weight %></td>
+        <td><%= barrel.tare %></td>
+        <td><%= link_to 'Show', barrel %></td>
+        <td><%= link_to 'Edit', edit_barrel_path(barrel) %></td>
+        <td><%= link_to 'Destroy', barrel, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Barrel', new_barrel_path %>

@@ -1,0 +1,21 @@
+<%= form_for(@drawer_container) do |f| %>
+  <% if @drawer_container.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@drawer_container.errors.count, "error") %> prohibited this drawer_container from being saved:</h2>
+
+      <ul>
+      <% @drawer_container.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :drawers %><br>
+    <%= f.number_field :drawers %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

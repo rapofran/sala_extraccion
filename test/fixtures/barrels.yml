@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  type: 
+  net_weight: 1.5
+  tare: 1.5
+
+two:
+  type: 
+  net_weight: 1.5
+  tare: 1.5

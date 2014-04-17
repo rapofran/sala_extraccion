@@ -1,0 +1,21 @@
+<%= form_for(@wax) do |f| %>
+  <% if @wax.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@wax.errors.count, "error") %> prohibited this wax from being saved:</h2>
+
+      <ul>
+      <% @wax.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :weight %><br>
+    <%= f.text_field :weight %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

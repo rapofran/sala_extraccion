@@ -1,0 +1,27 @@
+<h1>Listing waxes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Weight</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @waxes.each do |wax| %>
+      <tr>
+        <td><%= wax.weight %></td>
+        <td><%= link_to 'Show', wax %></td>
+        <td><%= link_to 'Edit', edit_wax_path(wax) %></td>
+        <td><%= link_to 'Destroy', wax, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Wax', new_wax_path %>

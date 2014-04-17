@@ -1,0 +1,27 @@
+<h1>Listing drawer_containers</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Drawers</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @drawer_containers.each do |drawer_container| %>
+      <tr>
+        <td><%= drawer_container.drawers %></td>
+        <td><%= link_to 'Show', drawer_container %></td>
+        <td><%= link_to 'Edit', edit_drawer_container_path(drawer_container) %></td>
+        <td><%= link_to 'Destroy', drawer_container, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Drawer container', new_drawer_container_path %>

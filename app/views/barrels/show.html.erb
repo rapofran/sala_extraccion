@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @barrel.type %>
+</p>
+
+<p>
+  <strong>Net weight:</strong>
+  <%= @barrel.net_weight %>
+</p>
+
+<p>
+  <strong>Tare:</strong>
+  <%= @barrel.tare %>
+</p>
+
+<%= link_to 'Edit', edit_barrel_path(@barrel) %> |
+<%= link_to 'Back', barrels_path %>
