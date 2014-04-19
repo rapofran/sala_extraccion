@@ -1,0 +1,2 @@
+class ExitMovement < Movement
+end

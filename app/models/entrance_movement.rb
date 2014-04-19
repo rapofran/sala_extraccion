@@ -1,0 +1,2 @@
+class EntranceMovement < Movement
+end

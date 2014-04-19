@@ -1,4 +1,7 @@
 SalaExtraccion::Application.routes.draw do
+
+  root  to: "producers#index"
+
   resources :waxes
 
   resources :barrels

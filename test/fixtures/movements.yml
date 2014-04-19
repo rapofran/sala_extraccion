@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  type: 
+  nro_remit: MyString
+  reference: 
+
+two:
+  type: 
+  nro_remit: MyString
+  reference: 
