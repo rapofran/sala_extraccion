@@ -3,9 +3,7 @@
 one:
   type: 
   nro_remit: MyString
-  reference: 
 
 two:
   type: 
   nro_remit: MyString
-  reference: 

@@ -1,11 +1,11 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  type: 
+  type: EntranceMovement
   net_weight: 1.5
   tare: 1.5
 
 two:
-  type: 
+  type: EntranceMovement
   net_weight: 1.5
   tare: 1.5
