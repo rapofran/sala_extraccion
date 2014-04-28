@@ -1,45 +1,60 @@
 <div class="box-body">
   <%= form_for(@producer) do |f| %>
     <% if @producer.errors.any? %>
-      <div id="error_explanation">
-        <h2><%= pluralize(@producer.errors.count, "error") %> prohibited this producer from being saved:</h2>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="box box-danger">
+            <div class="box-header">
+              <i class="fa fa-warning"></i>
+              <h3 class="box-title">Alerts</h3>
+            </div><!-- /.box-header -->
+            <div class="box-body">
+              <div class="alert alert-danger alert-dismissable">
+                <h2><%= pluralize(@producer.errors.count, "error") %> prohibited this producer from being saved:</h2>
 
-        <ul>
-        <% @producer.errors.full_messages.each do |msg| %>
-          <li><%= msg %></li>
-        <% end %>
-        </ul>
-      </div>
+                <ul>
+                <% @producer.errors.full_messages.each do |msg| %>
+                  <li><%= msg %></li>
+                <% end %>
+                </ul>
+              </div> </div> </div> </div> </div> </div>
     <% end %>
 
     <div class="form-group">
-      <div class="field">
-        <%= f.label :dni %><br>
-        <%= f.text_field :dni %>
-      </div>
-      <div class="field">
-        <%= f.label :name %><br>
-        <%= f.text_field :name %>
-      </div>
-      <div class="field">
-        <%= f.label :last_name %><br>
-        <%= f.text_field :last_name %>
-      </div>
-      <div class="field">
-        <%= f.label :telephone %><br>
-        <%= f.text_field :telephone %>
-      </div>
-      <div class="field">
-        <%= f.label :address %><br>
-        <%= f.text_field :address %>
-      </div>
-      <div class="field">
-        <%= f.label :renapa %><br>
-        <%= f.text_field :renapa %>
-      </div>
-      <div class="actions">
-        <%= f.submit %>
-      </div>
-    </div>  
+
+      <label>Name</label>
+      <div class="input-group">
+          <input type="text" name="producer[name]" class="form-control"/>
+      </div><!-- /.input group -->
+
+      <label>Last Name</label>
+      <div class="input-group">
+          <input type="text" name="producer[last_name]" class="form-control"/>
+      </div><!-- /.input group -->
+
+      <label>Dni</label>
+      <div class="input-group">
+          <input type="text" name="producer[dni]" class="form-control"/>
+      </div><!-- /.input group -->
+
+      <label>Renapa</label>
+      <div class="input-group">
+          <input type="text" name="producer[renapa]" class="form-control"/>
+      </div><!-- /.input group -->      
+      
+      <label>Telephone</label>
+      <div class="input-group">
+          <input type="text" name="producer[telephone]" class="form-control"/>
+      </div><!-- /.input group -->
+
+      <label>Address</label>
+      <div class="input-group">
+          <input type="text" name="producer[address]" class="form-control"/>
+      </div><!-- /.input group --></br>
+    
+      <div class="box-footer">
+        <button type="submit" name="commit" value="Create Producer" class="btn btn-primary">New Producer</button>
+      </div> 
+    </div>
   <% end %>
 </div>
