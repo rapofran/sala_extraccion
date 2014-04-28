@@ -3,5 +3,5 @@ class Barrel < ActiveRecord::Base
   validates :tare, :net_weight, :type, presence: true
 
   # associations
-  has_and_belongs_to_many :movements
+  belongs_to :barrels_incomes
 end

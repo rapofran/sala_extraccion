@@ -11,12 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140419183459) do
+ActiveRecord::Schema.define(version: 20140428122100) do
 
   create_table "barrels", force: true do |t|
     t.string   "type"
     t.float    "net_weight"
     t.float    "tare"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "barrels_incomes", force: true do |t|
+    t.string   "nro_remit"
+    t.integer  "producer_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -33,8 +40,7 @@ ActiveRecord::Schema.define(version: 20140419183459) do
     t.datetime "updated_at"
   end
 
-  create_table "movements", force: true do |t|
-    t.string   "type"
+  create_table "drawer_conteiner_incomes", force: true do |t|
     t.string   "nro_remit"
     t.integer  "producer_id"
     t.datetime "created_at"

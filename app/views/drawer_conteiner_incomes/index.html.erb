@@ -1,0 +1,27 @@
+<h1>Listing drawer_conteiner_incomes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nro remit</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @drawer_conteiner_incomes.each do |drawer_conteiner_income| %>
+      <tr>
+        <td><%= drawer_conteiner_income.nro_remit %></td>
+        <td><%= link_to 'Show', drawer_conteiner_income %></td>
+        <td><%= link_to 'Edit', edit_drawer_conteiner_income_path(drawer_conteiner_income) %></td>
+        <td><%= link_to 'Destroy', drawer_conteiner_income, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Drawer conteiner income', new_drawer_conteiner_income_path %>

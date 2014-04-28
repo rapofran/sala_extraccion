@@ -1,0 +1,27 @@
+<h1>Listing barrels_incomes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nro remit</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @barrels_incomes.each do |barrels_income| %>
+      <tr>
+        <td><%= barrels_income.nro_remit %></td>
+        <td><%= link_to 'Show', barrels_income %></td>
+        <td><%= link_to 'Edit', edit_barrels_income_path(barrels_income) %></td>
+        <td><%= link_to 'Destroy', barrels_income, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Barrels income', new_barrels_income_path %>

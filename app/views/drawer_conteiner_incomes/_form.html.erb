@@ -1,0 +1,21 @@
+<%= form_for(@drawer_conteiner_income) do |f| %>
+  <% if @drawer_conteiner_income.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@drawer_conteiner_income.errors.count, "error") %> prohibited this drawer_conteiner_income from being saved:</h2>
+
+      <ul>
+      <% @drawer_conteiner_income.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :nro_remit %><br>
+    <%= f.text_field :nro_remit %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

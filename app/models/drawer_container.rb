@@ -3,5 +3,5 @@ class DrawerContainer < ActiveRecord::Base
   validates :drawers, presence: true
 
   # associations
-  belongs_to :movement
+  belongs_to :drawerconteiner_incomes
 end

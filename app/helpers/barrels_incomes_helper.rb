@@ -1,0 +1,2 @@
+module BarrelsIncomesHelper
+end

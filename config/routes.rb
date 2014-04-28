@@ -1,14 +1,18 @@
 SalaExtraccion::Application.routes.draw do
 
   root  to: "producers#index"
+  
+  resources :producers
+  
+  resources :drawer_conteiner_incomes
+
+  resources :barrels_incomes
 
   resources :waxes
 
   resources :barrels
 
   resources :drawer_containers
-
-  resources :producers
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
